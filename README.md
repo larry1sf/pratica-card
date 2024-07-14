@@ -4,19 +4,20 @@
 
 ## Datos
 
-- 🦄 **Desarrollador/a:** *Nombre*
-- 🐇 **Link a red social:** *https://twitter.com/nombre*
-- 🦾 **Perfil:** *Novato / Bajo / Medio / Avanzado / Experto*
-- 💬 **Un comentario breve o frase ingeniosa**: *-*
+- 🦄 **Desarrollador/a:** _larry_
+- 🐇 **Link a red social:** _No tengo_
+- 🦾 **Perfil:** _Bajo_
+- 💬 **Un comentario breve o frase ingeniosa**: _De tanto intenar se aprende._
 
 ## Observaciones
 
-*Escribe aquí tus observaciones sobre la implementación*
+_primera parte del car user._
 
 > Puedes encontrar otros retos de Manz.dev en: <br>▶ https://lenguajejs.com/retos/
 
 ---
-*Puedes borrar todo desde esta línea en adelante*
+
+_Puedes borrar todo desde esta línea en adelante_
 
 ---
 

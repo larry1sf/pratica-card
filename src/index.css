@@ -1,1 +1,114 @@
+/* stylelint-disable stylistic/no-missing-end-of-source-newline */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: " Londrina";
+  font-weight: 400;
+  src: url("../public/fonts/Londrina.otf") format("opentype");
+}
 
+@font-face {
+  font-family: " Exo";
+  font-weight: 400;
+  src: url("../public/fonts/Exo-Light.ttf");
+}
+
+:root {
+  --card-h: 600px;
+  --card-w: 350px;
+  --avatar-size: 128px;
+  --foto-bg-h: 200px;
+  --foto-bg-w: 300px;
+  --fondo-bg-1: #ff3867;
+  --fondo-bg-2: #ffc873;
+  --fondo-bg-3: #d37ec6;
+  --txt-s: #a05d5d;
+  --btn: #2d7cbf;
+  --bg-s: #888;
+  --b: 3px solid #d37ec6;
+}
+
+body div {
+  height: 100vh;
+  min-width: var(--card-w);
+}
+
+.h-19 {
+  height: 19%;
+}
+
+.h-35 {
+  height: 35%;
+}
+
+.h-80 {
+  height: 80vh;
+}
+
+.h-80-por {
+  height: 70%;
+}
+
+.top-70 {
+  top: 7rem;
+}
+
+.contenedor {
+  width: var(--card-w);
+  margin: 0 auto;
+  background:
+    linear-gradient(
+      to top right,
+      var(--fondo-bg-3) 0%,
+      var(--fondo-bg-2) 50%,
+      var(--fondo-bg-1) 90%
+    );
+  background-repeat: no-repeat;
+}
+
+.contenedor .contenedor-head {
+  background: url("../public/imgs/bg-codigo.jpg");
+  height: 30%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-bottom: var(--b);
+}
+
+.contenedor .contenedor-head img {
+  border: var(--b);
+}
+
+.contenedor-body {
+  box-shadow: 0 0 4px #000 inset;
+}
+
+p.h1 {
+  font-family: " Londrina";
+}
+
+.localidad {
+  font-family: " Exo";
+  color: var(--txt-s);
+  font-size: 14px;
+}
+
+#location {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.13);
+  height: calc(var(--avatar-size) * 0.13);
+  background: url("../public/svg/location-pin.svg") no-repeat;
+  background-size: contain;
+}
+
+#die {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.13);
+  height: calc(var(--avatar-size) * 0.13);
+  background: url("../public/svg/die.svg") no-repeat;
+  background-size: contain;
+}
+
+#desc {
+  font-family: " Exo";
+  color: #888;
+  font-size: 16px;
+}
