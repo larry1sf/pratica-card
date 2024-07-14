@@ -78,7 +78,7 @@ body div {
 }
 
 .contenedor-body {
-  box-shadow: 0 0 4px #000 inset;
+  box-shadow: 0 0 8px var(--bg-s) inset;
 }
 
 p.h1 {
@@ -109,6 +109,48 @@ p.h1 {
 
 #desc {
   font-family: " Exo";
-  color: #888;
   font-size: 16px;
+}
+
+#footer {
+  color: var(--bg-s);
+  border: 1px solid #88888859;
+  border-bottom: 0;
+  border-left: 0;
+  border-right: 0;
+}
+
+#footer p {
+  color: #000;
+  /* border: 1px solid var(--bg-s); */
+}
+
+#note,
+#followers,
+#following {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.12);
+  height: calc(var(--avatar-size) * 0.14);
+  background: url("../public/svg/note.svg") no-repeat;
+  background-size: contain;
+}
+
+#followers {
+  background: url("../public/svg/user-follow.svg") no-repeat;
+  background-size: contain;
+}
+
+#following {
+  background: url("../public/svg/user-heart.svg") no-repeat;
+  background-size: contain;
+}
+
+#footer section {
+  &:nth-child(3) {
+    border-left: 1px solid #88888859;
+  }
+
+  &:nth-child(2) {
+    border-left: 1px solid #88888859;
+  }
 }
