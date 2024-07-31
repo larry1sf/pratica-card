@@ -1,6 +1,6 @@
 # manzdev-retos-titulo
 
-🌍 **URL del reto**: *https://lenguajejs.com/retos/nivel-facil/basic-card/*
+🌍 **URL del reto**: *[esto va para la pagina del reto.](https://larry1sf.github.io/pratica/)*
 
 ## Datos
 
