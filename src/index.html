@@ -10,104 +10,120 @@
       href="../public/imgs/me2.jpg"
       type="image/x-icon"
     />
-    <link rel="stylesheet" href="./index.css" />
-    <link rel="stylesheet" href="./assets/boostrap/css/bootstrap.min.css" />
-  </head>
-
-  <body class="container">
-    <div class="row justify-content-center g-0">
-      <div class="col-10 col-md-4 col-lg-4 col-xl-4 py-5">
-        <!-- head -->
-        <article
-          id="bg-fondo"
-          class="col-12 h-30 position-relative rounded rounded-bottom-0"
-        >
-          <div
-            class="d-flex justify-content-center position-relative top-70 h-50"
-          >
-            <img
-              id="avatar"
-              class="rounded-pill img-fluid z-1"
-              src="../public/imgs/me2.jpg"
-              alt="foto de avatar"
-              width="100em"
-              aria-label="foto de perfil"
-            />
-          </div>
-        </article>
-
-        <!-- body -->
-        <article
-          class="contenedor-body col-12 text-bg-light rounded-bottom h-70 overflow-hidden position-relative"
-        >
-          <p class="h1 fs-1 pt-5 text-center">xxxTentacion</p>
-
-          <p
-            class="localidad d-flex flex-column justify-content-center align-items-center h-auto position-sticky bottom-60"
-          >
-            <i>
-              <span id="location"></span> Plantation, Florida, Estados Unidos</i
-            >
-
-            <i
-              ><span id="die"></span> 18 Junio 2018 En Deerfield Beach, Florida
-            </i>
-          </p>
-
-          <section
-            class="row justify-content-center g-0 position-sticky bottom-20"
-          >
-            <p class="col-12 g-4 h-auto" id="desc">
-              Un conocido rapero ingles que se dio a cononer por su
-              espontaniedad y variedad pues manifestaba sus sentimientos en
-              diferentes estilos y se plasmaba con autoriedad en todos ellos
-            </p>
-          </section>
-
-          <section class="col-12 text-center g-4 position-sticky bottom-10">
-            <button
-              class="col-4 btn btn-outline-primary rounded-pill"
-              type="button"
-              title="Follow"
-            >
-              Follow
-            </button>
-          </section>
-
-          <footer
-            id="footer"
-            class="row col-12 flex-row align-items-center rounded rounded-top-0 g-0 position-absolute bottom-0"
-          >
-            <section class="col-4 d-flex flex-column align-items-center">
-              Post
-              <article class="d-flex align-items-center mb-1">
-                <span id="note" class="me-1"></span>
-                <small>3.000</small>
-              </article>
-            </section>
-            <section class="col-4 d-flex flex-column align-items-center">
-              Followers
-              <article class="d-flex align-items-center mb-1">
-                <span id="followers"></span>
-                <small>3.000</small>
-              </article>
-            </section>
-            <section class="col-4 d-flex flex-column align-items-center">
-              Following
-              <article class="d-flex align-items-center mb-1">
-                <span id="following" class=""></span>
-                <small>3.000</small>
-              </article>
-            </section>
-          </footer>
-        </article>
-      </div>
-    </div>
 
     <script
       type="module"
       src="./assets/boostrap/js/bootstrap.bundle.min.js"
     ></script>
-    <script type="module" src="./index.js"></script>
+    <link rel="stylesheet" href="./assets/boostrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./modules/css/index.css" />
+    <script type="module" src="./modules/js/index.js"></script>
+  </head>
+
+  <body>
+    <div class="container h-100 d-flex align-items-center">
+      <div class="row justify-content-center">
+        <div id="col-1" class="col-8 col-lg-5 bg-light rounded">
+          <div class="row row-cols-1 h-100">
+            <!-- head -->
+            <article
+              id="bg-fondo"
+              class="col-12 h-30 rounded rounded-bottom-0 position-relative"
+            >
+              <div
+                class="row justify-content-center align-items-center h-70 position-relative top-40"
+              >
+                <img
+                  id="avatar"
+                  class="col-6 col-sm-5 col-md-4 col-lg-4 col-xl-3 rounded-pill"
+                  src="../public/imgs/me2.jpg"
+                  alt="foto de avatar"
+                  aria-label="foto de perfil"
+                />
+              </div>
+            </article>
+
+            <!-- body -->
+            <article id="container-body" class="col-12 position-relative">
+              <div class="vstack gap-2 gap-sm-3 gap-md-5">
+                <div class="text-center text-truncate">
+                  <strong
+                    class="d-flex align-items-center justify-content-center"
+                    >@Larry Moncada</strong
+                  >
+
+                  <i>
+                    <span id="location"></span> Plantation, Florida, Estados
+                    Unidos</i
+                  >
+                  <br />
+                  <i
+                    ><span id="die"></span> 18 Junio 2018 Deerfield Beach,
+                    Florida
+                  </i>
+                </div>
+
+                <p id="desc" class="text-center mb-0">
+                  Un conocido rapero ingles que se dio a cononer por su
+                  espontaniedad y variedad pues manifestaba sus sentimientos en
+                  diferentes estilos y se plasmaba con autoriedad en todos ellos
+                </p>
+
+                <section class="d-flex justify-content-center">
+                  <button
+                    class="rounded btn btn-outline-primary"
+                    type="button"
+                    title="Follow"
+                  >
+                    Follow
+                  </button>
+                </section>
+
+                <footer
+                  id="footer"
+                  class="row row-cols-3 position-absolute bottom-0 start-0 w-100 p-1 g-0 border border-dark rounded-bottom"
+                >
+                  <div class="items-social">
+                    <b class="d-flex align-items-center justify-content-center"
+                      >Post</b
+                    >
+                    <div
+                      class="row row-cols-2 align-items-center justify-content-center g-0"
+                    >
+                      <span id="note"></span>
+                      <small>3.000</small>
+                    </div>
+                  </div>
+
+                  <div class="items-social">
+                    <b class="d-flex align-items-center justify-content-center">
+                      Followers
+                    </b>
+                    <div
+                      class="row row-cols-2 align-items-center justify-content-center g-0"
+                    >
+                      <span id="followers"></span>
+                      <small>3.000</small>
+                    </div>
+                  </div>
+
+                  <div class="items-social">
+                    <b class="d-flex align-items-center justify-content-center">
+                      Following</b
+                    >
+                    <div
+                      class="row row-cols-2 align-items-center justify-content-center g-0"
+                    >
+                      <span id="following" class=""></span>
+                      <small>3.000</small>
+                    </div>
+                  </div>
+                </footer>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

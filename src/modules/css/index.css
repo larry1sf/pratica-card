@@ -1,0 +1,133 @@
+/* stylelint-disable stylistic/no-missing-end-of-source-newline */
+/* stylelint-disable font-family-no-missing-generic-family-keyword */
+@font-face {
+  font-family: " Londrina";
+  font-weight: 400;
+  src: url("../../../public/fonts/Londrina.otf") format("opentype");
+}
+
+@font-face {
+  font-family: " Exo";
+  font-weight: 400;
+  src: url("../../../public/fonts/Londrina.otf");
+}
+
+:root {
+  --card-h: 600px;
+  --card-w: 350px;
+  --avatar-size: 128px;
+  --foto-bg-h: 200px;
+  --foto-bg-w: 300px;
+  --fondo-bg-1: #ff3867;
+  --fondo-bg-2: #ffc873;
+  --fondo-bg-3: #d37ec6;
+  --txt-s: #a05d5d;
+  --btn: #2d7cbf;
+  --bg-s: #888;
+  --b: 3px solid #e758cf;
+}
+
+body {
+  background: linear-gradient(
+    to top right,
+    var(--fondo-bg-3) 0%,
+    var(--fondo-bg-2) 50%,
+    var(--fondo-bg-1) 90%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  min-width: none;
+}
+
+.container.h-100 {
+  height: 100vh !important;
+}
+
+.container > .row {
+  height: var(--card-h);
+}
+.h-30 {
+  height: calc(30%);
+}
+
+.h-70 {
+  height: calc(70%);
+}
+
+#bg-fondo {
+  background: url("../../../public/imgs/bg-codigo.jpg") no-repeat;
+  background-size: cover;
+}
+
+#avatar {
+  height: 100%;
+  padding: 0;
+  object-fit: cover;
+
+  object-position: 0 -0%;
+  border: var(--b);
+}
+
+.top-40 {
+  top: 40%;
+}
+
+#container-body {
+  height: 66%;
+  top: 2%;
+}
+
+/* svg localidad */
+#location {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.11);
+  height: calc(var(--avatar-size) * 0.11);
+  background: url("../../../public/svg/location-pin.svg") no-repeat;
+  background-size: contain;
+}
+
+/* svg muerte */
+#die {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.11);
+  height: calc(var(--avatar-size) * 0.11);
+  background: url("../../../public/svg/die.svg") no-repeat;
+  background-size: contain;
+}
+
+#desc {
+  font-family: " Exo";
+}
+
+#footer {
+  .items-social {
+    text-align: center;
+    font-size: smaller;
+    &:nth-child(2) {
+      border-right: 1px solid #000;
+    }
+    &:nth-child(1) {
+      border-right: 1px solid #000;
+    }
+  }
+}
+
+#note,
+#followers,
+#following {
+  display: inline-block;
+  width: calc(var(--avatar-size) * 0.12);
+  height: calc(var(--avatar-size) * 0.14);
+  background: url("../../../public/svg/note.svg") no-repeat;
+  background-size: contain;
+}
+
+#followers {
+  background: url("../../../public/svg/user-follow.svg") no-repeat;
+  background-size: contain;
+}
+
+#following {
+  background: url("../../../public/svg/user-heart.svg") no-repeat;
+  background-size: contain;
+}
