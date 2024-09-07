@@ -1,10 +1,10 @@
-import { defineConfig } from "vite";
-import path from "node:path";
+import { defineConfig } from "vite"
+import path from "node:path"
 
-const isGitHubPages = true;
-const folderName = `${path.basename(process.cwd())}/`;
-const mode = process.env.NODE_ENV === "production" ? "production" : "development";
-const base = mode === "production" && isGitHubPages ? `/${folderName}` : "/";
+const isGitHubPages = true
+const folderName = `${path.basename(process.cwd())}/`
+const mode = process.env.NODE_ENV === "production" ? "production" : "development"
+const base = mode === "production" && isGitHubPages ? `/${folderName}` : "/"
 
 export default defineConfig({
   root: "src",
@@ -21,4 +21,4 @@ export default defineConfig({
     outDir: "../dist",
     assetsDir: "./"
   }
-});
+})
