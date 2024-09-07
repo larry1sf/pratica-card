@@ -4,21 +4,22 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",
+    "lint": "eslint .",
     "build": "rm -rf dist && vite build",
     "preview": "vite preview",
     "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
-    "gh-pages": "^6.0.0",
-    "vite": "^4.4.9"
+    "gh-pages": "6.0.0",
+    "standard": "17.1.0",
+    "vite": "4.4.9"
   },
   "keywords": [],
   "license": "ISC",
   "dependencies": {
-    "bootstrap": "^5.3.3",
-    "eslint": "^8.49.0",
-    "eslint-config-manzdev": "^0.0.3",
-    "stylelint": "^15.10.3",
-    "stylelint-config-manzdev": "^0.0.11"
+    "bootstrap": "^5.3.3"
+  },
+  "eslintConfig": {
+    "extends": "./node_modules/standard/eslintrc.json"
   }
 }
