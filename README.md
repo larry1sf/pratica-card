@@ -16,11 +16,9 @@
 
 - ☕ **Retroalimentacion/Comentarios de ayuda**: _Desde el boton de ajustes se puede acceder a los comentarios donde tendras una pagina para dejarme cualquier tido de ayudas o recomendaciones que seguire al leerlas, ¡estare pendiente muchachos!_
 
-> Puedes encontrar otras paginas webs de mi portafolio en: [este link](https://github.com/larry1sf) <br>▶ 
+> Puedes encontrar otras paginas webs de mi portafolio en: [este link](https://github.com/larry1sf) ▶ 
 ---
 
-_Puedes borrar todo desde esta línea en adelante_
+_Puedes borrar todo desde esta línea en adelante_           
 
 ---
-
-Recuerda cambiar el título del repo, los datos y desplegar la versión en GitHub Pages e indicar la URL en la esquina superior derecha de tu repositorio de GitHub, junto a una pequeña descripción.
