@@ -19,6 +19,3 @@
 > Puedes encontrar otras paginas webs de mi portafolio en: [este link](https://github.com/larry1sf) ▶ 
 ---
 
-_Puedes borrar todo desde esta línea en adelante_           
-
----
