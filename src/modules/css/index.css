@@ -166,12 +166,12 @@ body {
         overflow: hidden;
         font-family: " font-1";
 
-        p {
+        >p {
           opacity: 1;
           transition: .1s, width .36s;
         }
 
-        img {
+        >img {
           z-index: 1;
         }
 
@@ -233,18 +233,18 @@ body {
         transition: var(--time) ease-in;
 
 
-        p {
+        >p {
           width: 80%;
           color: #444444;
           font-family: " font-1";
         }
 
-        span {
+        >span {
           width: 20%;
         }
 
-        p,
-        span {
+        >p,
+        >span {
           transition: var(--time);
         }
 
@@ -260,17 +260,17 @@ body {
             stroke: #fff;
           }
 
-          p {
+          >p {
             opacity: 0;
             width: 0;
           }
 
-          span {
+          >span {
             width: 100% !important;
           }
 
-          p,
-          span {
+          >p,
+          >span {
             transition: .3s, opacity 0s;
           }
         }
@@ -330,7 +330,7 @@ body {
   }
 
   /* avatar */
-  img {
+  >div>img {
     object-fit: cover;
     object-position: 60% 20%;
     border: 1px solid var(--bs-indigo);
@@ -379,7 +379,7 @@ body {
   margin-bottom: .5rem !important;
 
 
-  span {
+  >span {
     &::before {
       content: "Ubicacion:";
       text-transform: capitalize;
@@ -428,8 +428,8 @@ body {
 .card-footer {
   border-top: 1px solid var(--bs-indigo) !important;
 
-  small {
-    span {
+  >small {
+    >span {
       font-family: " font-1";
     }
   }

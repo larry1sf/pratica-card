@@ -1,4 +1,4 @@
-export default function miniReact() {
+export function miniReact() {
   const usuarios = ({
     srcFondo = "No tiene ruta de fondo",
     ruta = "No tiene ruta de imagen",
@@ -35,9 +35,20 @@ export default function miniReact() {
     color: { colorPrimario: "blanco-opaco", colorSegundario: "celeste cian" },
   }
 
-  const personaMostrar = estado
-    ? usuarios(personajeLarry)
-    : usuarios(personajeXXXTentacion)
-  const rende = { ...personaMostrar }
-  console.log(rende)
+  const personaMostrar = estado ? usuarios(personajeLarry) : usuarios(personajeXXXTentacion)
+  const perosajeAMostrar = { ...personaMostrar }
+  // console.log(perosajeAMostrar);
+}
+
+export function btnSeguir() {
+  const estados = ["Seguir", "Seguido"]
+  let estadoBtn = false
+  const btn = document.getElementById("seguir")
+    .addEventListener("click", (e) => {
+      const seguir = ({ el, array = Number() }) => {
+        el.target.innerText = el.target.title = el.target.ariaLabel = estados[array];
+      }
+      const qr = estadoBtn ? estadoBtn = false : estadoBtn = true
+      const rendeSeguido = qr ? seguir({ el: e, array: 1 }) : seguir({ el: e, array: 0 });
+    })
 }
