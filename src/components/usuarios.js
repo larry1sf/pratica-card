@@ -1,54 +1,54 @@
-export function miniReact() {
+export function miniReact () {
   const usuarios = ({
-    srcFondo = "No tiene ruta de fondo",
-    ruta = "No tiene ruta de imagen",
-    name = "Default",
+    srcFondo = 'No tiene ruta de fondo',
+    ruta = 'No tiene ruta de imagen',
+    name = 'Default',
     fechas = {
-      fechaNacimiento: "Fecha de nacimiento vacia",
-      fechaMuerte: "Fecha no fallecimineto vacia" | "sss",
+      fechaNacimiento: 'Fecha de nacimiento vacia',
+      fechaMuerte: 'Fecha no fallecimineto vacia' | 'sss'
     },
-    desc = "Este Usuario de tiene descripcion",
+    desc = 'Este Usuario de tiene descripcion',
     color = {
-      colorPrimario: "Color primario vacio",
-      colorSegundario: "Color segundario vacio",
-    },
+      colorPrimario: 'Color primario vacio',
+      colorSegundario: 'Color segundario vacio'
+    }
   }) => ({ srcFondo, ruta, name, fechas, desc, color })
 
-  let estado = true
+  const estado = true
   const personajeXXXTentacion = {
-    srcFondo: "https://wallpapercave.com/wp/wp6686864.png",
-    ruta: "https://e0.pxfuel.com/wallpapers/715/612/desktop-wallpaper-xxxtentacion-smiling-face.jpg",
-    name: "xxxtentacion",
+    srcFondo: 'https://wallpapercave.com/wp/wp6686864.png',
+    ruta: 'https://e0.pxfuel.com/wallpapers/715/612/desktop-wallpaper-xxxtentacion-smiling-face.jpg',
+    name: 'xxxtentacion',
     fechas: [
-      "Plantation, 23 de enero de 1998",
-      "Deerfield Beach, 18 de junio de 2018",
+      'Plantation, 23 de enero de 1998',
+      'Deerfield Beach, 18 de junio de 2018'
     ],
-    desc: "Un conocido rapero ingles que se dio a cononer por su espontaniedad y variedad pues manifestaba sus sentimientos en diferentes estilos y se plasmaba con autoriedad en todos ellos",
-    color: ["Negro", "Gris claro"],
+    desc: 'Un conocido rapero ingles que se dio a cononer por su espontaniedad y variedad pues manifestaba sus sentimientos en diferentes estilos y se plasmaba con autoriedad en todos ellos',
+    color: ['Negro', 'Gris claro']
   }
   const personajeLarry = {
-    srcFondo: "../../public/imgs/bg-codigo.jpg",
-    ruta: "../../public/imgs/me2.jpg",
-    name: "Larry Moncada",
-    fechas: { fechaNacimiento: "12/05/2005", fechaMuerte: undefined },
-    desc: "Un joven desarrollador apasionado por las tegnologias nuevas de programacion y administracion de proyectos enfocado en el front-end y con conocimientos fundamentales del back-end",
-    color: { colorPrimario: "blanco-opaco", colorSegundario: "celeste cian" },
+    srcFondo: '../../public/imgs/bg-codigo.jpg',
+    ruta: '../../public/imgs/me2.jpg',
+    name: 'Larry Moncada',
+    fechas: { fechaNacimiento: '12/05/2005', fechaMuerte: undefined },
+    desc: 'Un joven desarrollador apasionado por las tegnologias nuevas de programacion y administracion de proyectos enfocado en el front-end y con conocimientos fundamentales del back-end',
+    color: { colorPrimario: 'blanco-opaco', colorSegundario: 'celeste cian' }
   }
 
   const personaMostrar = estado ? usuarios(personajeLarry) : usuarios(personajeXXXTentacion)
   const perosajeAMostrar = { ...personaMostrar }
-  // console.log(perosajeAMostrar);
+  console.log(perosajeAMostrar)
 }
 
-export function btnSeguir() {
-  const estados = ["Seguir", "Seguido"]
+export function btnSeguir () {
+  const estados = ['Seguir', 'Seguido']
   let estadoBtn = false
-  const btn = document.getElementById("seguir")
-    .addEventListener("click", (e) => {
+  document.getElementById('seguir')
+    .addEventListener('click', (e) => {
       const seguir = ({ el, array = Number() }) => {
-        el.target.innerText = el.target.title = el.target.ariaLabel = estados[array];
+        el.target.innerText = el.target.title = el.target.ariaLabel = estados[array]
       }
       const qr = estadoBtn ? estadoBtn = false : estadoBtn = true
-      const rendeSeguido = qr ? seguir({ el: e, array: 1 }) : seguir({ el: e, array: 0 });
+      qr ? seguir({ el: e, array: 1 }) : seguir({ el: e, array: 0 })
     })
 }
