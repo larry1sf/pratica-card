@@ -28,23 +28,23 @@
     
     
     
-    <script type="module" crossorigin src="/pratica-card/index-b3dc4930.js"></script>
-    <link rel="stylesheet" href="/pratica-card/index-5393a9e8.css">
+    <script type="module" crossorigin src="/pratica-card/index-19e722e6.js"></script>
+    <link rel="stylesheet" href="/pratica-card/index-6fa67827.css">
   </head>
 
   <body>
     <div class="container ">
       <div class="row justify-content-center  p-3 ">
         <div class="col-12 col-md-9 col-lg-7 col-xl-6 py-1  ">
-          <div class="card h-100">
+          <div class="card h-100  position-relative">
             <!-- bg principal -->
-            <div class="position-relative" id="bg-fondo" role="banner">
+            <div class="position-relative opacar" id="bg-fondo" role="banner">
               <!-- boton de optiones -->
               <div class="position-absolute top-0 end-0 p-1">
                 <input class="d-none" type="checkbox" title="option" name="option" id="option">
 
-                <label class="position-relative z-2 option" for="option" tabindex="1">
-                  <div id="svg-option">
+                <label class="position-relative z-2 option" for="option" >
+                  <div id="svg-option" tabindex="1">
                     <svg id="svg-spin-option" width="35px" height="40px" viewBox="0 0 128 128" version="1.1"
                       xml:space="preserve" xmlns="http://www.w3.org/2000/svg"
                       xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -89,19 +89,23 @@
                   <!-- cambio de modo -->
                   <div class="w-70 row g-0 p-0 text-center btn-group" role="group" aria-label="cambiar de modo"
                     title="cambiar de modo">
-                    <label class="col-2 p-0 btn btn-dark" for="checkSwitch"><span>off</span></label>
+                    <label class="col-2 p-0 btn btn-dark" for="checkSwitch">
+                      <span>off</span>
+                    </label>
                     <div
                       class="col-4 form-check form-switch btn-dark d-flex justify-content-center bg-dark border-0 m-0">
                       <input class=" form-check-input focus-ring" type="checkbox" role="switch" id="checkSwitch">
                       <label class="form-check-label" for="checkSwitch"></label>
                     </div>
                     <label class="col-2 p-0 btn btn-dark" style="--bs-btn-dark:#fff;"
-                      for="checkSwitch"><span>on</span></label>
+                      for="checkSwitch">
+                      <span>on</span>
+                    </label>
                   </div>
                   <!-- button cambio de perfil -->
                   <div class="perfiles btn-group d-flex  align-items-center text-center position-relative">
 
-                    <div id="svg" class="col-3 order-3" role="button">
+                    <div data-bs-toggle="offcanvas" data-bs-target="#offcanvasAviso" aria-controls="offcanvasAviso"  id="svg" class="col-3 order-3" role="button">
                       <svg height="25px" width="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
                         fill="#000000">
                         <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -121,7 +125,6 @@
                     </div>
 
                     <p class="col-6  p-1 mb-0 order-2 text-truncate name"> nombre del perfil</p>
-
 
                   </div>
                   <!-- button comentarios -->
@@ -162,16 +165,16 @@
               </div>
             </div>
             <!-- texto del centro de la card -->
-            <div class="card-body vstack justify-content-evenly">
+            <div class="card-body vstack justify-content-around opacar">
               <!-- texto principales -->
-              <div class="text-center d-flex  align-items-center flex-column">
+              <div class="text-center row gap-3 gap-sm-4 justify-content-around align-items-center ">
                 <!-- text1 -->
                 <h1 class="col-7 d-flex card-title justify-content-center" tabindex="2">
                   <a class="name" id="n-1" href="#" target="_blank" style="text-decoration: none;">Larry Ceballos</a>
                 </h1>
                 <!-- txt2 -->
-                <h2 class="col-8 d-flex card-title row">
-                  <a class="fecha f-n hoverear " href="#" target="_blank" style="text-decoration: none;" tabindex="3">
+                <!-- <h2 class="col-8 d-flex card-title row"> -->
+                  <a class="fecha f-n hoverear  col-12 col-sm-5" href="#" target="_blank" style="text-decoration: none;" tabindex="3">
                     <i id="nacido" class="col-3">
                       <svg version="1.1 " height="30px" width="30px" style="margin-bottom: 1px;" id="designs"
                         xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -192,7 +195,7 @@
                     </i>
                     <span class=" col-9 ">nacido el 12/05/2005</span>
                   </a>
-                  <a class="fecha hoverear" href="#" target="_blank" style="text-decoration: none;" tabindex="4">
+                  <a class="fecha hoverear col-12 col-sm-5" href="#" target="_blank" style="text-decoration: none;" tabindex="4">
                     <i id="fallecido" class="col-3">
                       <svg version="1.1" height="30px" width="30px" id="designs" xmlns="http://www.w3.org/2000/svg"
                         xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 32 32" xml:space="preserve"
@@ -214,8 +217,8 @@
                     <span class="col-9">fallecido el 09/12/1987</span>
                   </a>
 
-                </h2>
-                <a class="location hoverear" href="#" target="_blank" tabindex="5">
+                <!-- </h2> -->
+                <a class="location hoverear col-7 px-0 col-sm-5" href="#" target="_blank" tabindex="5">
                   <span> Cra19 #39-26</span>
                 </a>
               </div>
@@ -233,7 +236,7 @@
               </div>
             </div>
             <!-- botones o insignias de footer -->
-            <div class="card-footer">
+            <div class="card-footer opacar">
 
               <div class="row row-cols-3 justify-content-around text-center p-0">
                 <small class="text-body-secondary logro row justify-content-center align-items-center p-1"
@@ -302,6 +305,24 @@
 
             </div>
 
+            <div class="offcanvas offcanvas-bottom text-bg-dark" data-bs-scroll="true" tabindex="-1" id="offcanvasAviso" aria-labelledby="offcanvasLabel">
+              <div class="offcanvas-header justify-content-center">                                                        
+                <h5 class="offcanvas-title" id="offcanvasLabel font-1">¿Cambiar de cuenta?</h5>
+                <button type="button" class="position-absolute end-0 me-2 btn-close" data-bs-dismiss="offcanvas" aria-label="close"></button>
+              </div>
+              <div class="offcanvas-body">
+                <div class="row justify-content-center align-items-center ">
+                    <div class="col-5">
+                      <input type="radio" class="btn-check" name="options-base" id="btnConfir1" autocomplete="off" > 
+                      <label class="btn col-12 mx-1 font-2" for="btnConfir1" data-bs-dismiss="offcanvas" aria-label="Cancelar" title="Cancelar">Cancelar</label>
+                    </div>
+                    <div class="col-5">
+                      <input type="radio" class="btn-check" name="options-base" id="btnConfir2" autocomplete="off" checked> 
+                      <label class="btn col-12 mx-1 font-2" for="btnConfir2" aria-label="Confirmar" title="Confirmar">Confirmar</label>
+                    </div>
+                  </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
