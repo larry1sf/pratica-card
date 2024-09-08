@@ -349,15 +349,6 @@ body {
   }
 }
 
-.fecha.hoverear.f-n {
-  &:hover {
-    &::after {
-      scale: 8 1;
-    }
-  }
-}
-
-
 .fecha.hoverear {
   font-family: " font-2";
   font-size: 1.3rem;
@@ -366,7 +357,7 @@ body {
 
   &:hover {
     &::after {
-      scale: 6 1;
+      scale: 7.7 1;
     }
   }
 }
