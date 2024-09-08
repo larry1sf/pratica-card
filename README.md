@@ -1,6 +1,6 @@
 # Card de Larry ceballos
 
-🌍 **URL del reto**: *[esto va para la pagina del reto.](https://larry1sf.github.io/pratica/)*
+🌍 **URL del reto**: *[esto va para la pagina del reto.](https://larry1sf.github.io/pratica-card/)*
 
 ## Datos 
 
