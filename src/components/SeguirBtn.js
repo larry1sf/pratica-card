@@ -1,4 +1,4 @@
-export function btnSeguir () {
+export default function btnSeguir () {
   const estados = ['Seguir', 'Seguido']
   let estadoBtn = false
   document.getElementById('seguir')

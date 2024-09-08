@@ -1,4 +1,4 @@
-export function miniReact () {
+export default function miniReact () {
   const usuarios = ({
     srcFondo = 'No tiene ruta de fondo',
     ruta = 'No tiene ruta de imagen',
