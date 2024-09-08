@@ -1,5 +1,5 @@
 import { miniReact, btnSeguir } from '../../components/usuarios.js'
-
-miniReact()
-
+import { CambioColores } from './ajusteColores.js'
+// miniReact()
+CambioColores()
 btnSeguir()
