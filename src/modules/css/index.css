@@ -15,34 +15,35 @@
   --fondo-bg-1: #ff3867;
   --fondo-bg-2: #ffc873;
   --fondo-bg-3: #d37ec6;
-  --bg: #eee;
-  /* --bs-indigo: #6610f2; */
-  --bs-indigo-option: #4b475174;
-
-
+  
+  
   /* focus */
   --bg-o: #ccc;
   --bg-s: #888;
-
   /*  animaciones*/
   --time: .3s;
-
+  
+  
+  /* colores */
+  --bg: #F8F2F2;
+  --txt: #222831;
+  --bs-indigo:#85CEFF;
+  --bs-purple: #69A5CD;
+  --bs-btn-active: #548EB6;
+  /* --bs-indigo-option: #000; */
+  /* --btn-dark: #fff; */
   /*bordes  */
   --br: 5px;
   --b: 1px solid var(--bg-s);
   --b-2: 1px solid var(--bs-purple);
-  --bs-btn-active: #6e42c1be;
-  --bs-purple: #6f42c1;
-  /* color */
-  --txt: #444444;
-  --btn-dark: #fff;
 }
 .theme-dark{
-  --b-2: 1px solid #ec0909;
-  --bs-pulple:#91f0ccd5 !important;
-  --bs-indigo:#555555;
-  --bs-btn-active: #c1b942be;
-  --bg:var(--bg-s);
+  --b-2: 1px solid var(--bs-indigo);
+  --bg:#222831;
+  --txt:#E6E7E9;
+  --bs-purple:#A3AAB8;
+  --bs-indigo:#808A9D;
+  --bs-btn-active: #484F5B;
 }
 
 .btn-close{
@@ -73,6 +74,7 @@
 .font-2{
   font-family: " font-2";
 }
+
 .btn{
   color: var(--bg);
   &:hover{
@@ -80,7 +82,12 @@
   }
 }
 
-.btn-check:checked+.btn, .btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
+.btn-check:checked+.btn{
+  color: var(--txt) !important;
+  font-weight: 400;
+}
+
+.btn-check:checked+.btn,.btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
   border-color: var(--bs-indigo) ;
   background-color: var(--bs-indigo);
   color: var(--bg);
@@ -154,8 +161,8 @@ body {
       &:hover {
         cursor: pointer;
         background-color: var(--bg);
-
         box-shadow: 0 0 5px var(--bs-indigo);
+
 
         .st2 {
           stroke: var(--bs-indigo);
@@ -182,12 +189,13 @@ body {
       .form-switch .form-check-input:focus {
         width: 2em;
         margin-left: -2.5em;
-        background-image: url("../../../public/svg/pint.svg");
+        background-image: url("../../../public/svg/pint-active.svg");
         background-position: left center;
         border: none;
       }
 
       #checkSwitch {
+        background-image:  url("../../../public/svg/pint.svg");
         &:checked {
           flex-shrink: 0;
           width: 2em;
@@ -198,7 +206,7 @@ body {
           -moz-appearance: none;
           appearance: none;
           background-color: var(--bg);
-          background-image: url("../../../public/svg/pint.svg");
+          background-image: url("../../../public/svg/pint-active.svg");
           background-repeat: no-repeat;
           background-position: right center;
           background-size: contain;
@@ -229,8 +237,9 @@ body {
           transition: .1s, width .36s;
         }
 
-        >img {
+        >#img img {
           z-index: 1;
+          border: 2px solid transparent;
         }
 
         &:hover {
@@ -261,7 +270,7 @@ body {
 
           #img img {
             border: 1px solid var(--bg);
-            transition: .1s;
+            transition: .15s;
           }
         }
 
@@ -362,7 +371,6 @@ body {
 
           &:hover {
             border: var(--b-2);
-            box-shadow: 0 0 4px var(--bs-indigo-option);
           }
 
           #svg-spin-option {
@@ -415,7 +423,7 @@ body {
 
   &:hover {
     &::after {
-      scale: 6 1;
+      scale: 7 1;
     }
   }
 }
@@ -442,8 +450,15 @@ body {
   margin: 0 1.5rem .5rem 1.5rem;
   font-family: " font-2";
   font-size: 1rem;
+  color: var(--txt);
 }
-
+.desc.hoverear{
+  &:hover{
+    &::after{
+      scale: 10 1;
+    }
+  }
+}
 .hoverear {
   position: relative;
 
@@ -451,7 +466,7 @@ body {
     cursor: pointer;
 
     &::after {
-      scale: 10 1;
+      scale: 9.3 1;
       transition: .15s ease-in, ;
     }
   }
@@ -470,6 +485,23 @@ body {
   }
 }
 
+@media (0px <= width <= 580px) {
+  .fecha.hoverear{
+    &:hover{
+      &::after{
+        scale: 5.5 1;
+      }
+    }
+  }
+  .hoverear{
+  &:hover{
+    &::after{
+       scale:7 1;
+      }
+    }
+  }
+}
+
 #seguir {
   font-family: " font-1";
 }
@@ -481,10 +513,53 @@ body {
 .card-footer {
   border-top: 1px solid var(--bs-indigo) !important;
   background: var(--bg);
-  >small {
+  
+  >div>small {
+    background: var(--bg);
+    border-radius: var(--br);
+    transition: var(--time);
+     svg{
+      transition: var(--time);
+     }
+     span{
+      /* padding: .3rem 0; */
+      transition: var(--time);
+     }
+     &:hover{
+       cursor: pointer;
+       filter: brightness(1) contrast(1.3);
+       box-shadow: 0 0 4px inset var(--txt),0 .16rem 6px var(--txt);
+      background-image: url(https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg);
+      background-repeat: no-repeat;
+      background-size: 300% 300%; 
+       transition: var(--time);
+       
+       &:nth-child(2){
+        background-image: url(https://www.dicoding.com/blog/wp-content/uploads/2022/11/aaassdsd.png);
+        background-size: 220% 220%  ; 
+        background-position:25% top;
+        transition: background-position 0s;
+      }
+       &:nth-child(3){
+        background-image: url(https://www.amincharoliya.com/_next/image?url=%2Fimages%2Farticles%2Fjs-class.png&w=3840&q=75);
+        background-size: 190% 250%  ;
+      }
+       >span{
+         transition: var(--time);
+         transform: scale(.1) ;
+        }
+      
+      svg{
+        scale:1.2;
+        transform: scale(.5) translate(-60%, -75%);
+        transition: .5s;
+      }
+    }
+
     >span {
       font-family: " font-1";
     }
+    
   }
 }
 
