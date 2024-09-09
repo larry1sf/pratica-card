@@ -38,8 +38,10 @@
   --btn-dark: #fff;
 }
 .theme-dark{
-  --bs-pulple:#91f0ccd5;
+  --b-2: 1px solid #ec0909;
+  --bs-pulple:#91f0ccd5 !important;
   --bs-indigo:#555555;
+  --bs-btn-active: #c1b942be;
   --bg:var(--bg-s);
 }
 
@@ -222,6 +224,7 @@ body {
         font-family: " font-1";
 
         >p {
+          color: var(--txt);
           opacity: 1;
           transition: .1s, width .36s;
         }
@@ -290,7 +293,7 @@ body {
 
         >p {
           width: 80%;
-          color: #444444;
+          color: var(--txt);
           font-family: " font-1";
         }
 
@@ -471,9 +474,13 @@ body {
   font-family: " font-1";
 }
 
+.card-body{
+  background: var(--bg);
+}
+
 .card-footer {
   border-top: 1px solid var(--bs-indigo) !important;
-
+  background: var(--bg);
   >small {
     >span {
       font-family: " font-1";
