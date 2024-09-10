@@ -1,5 +1,5 @@
-@import url("../css/index.css");
+@import url("./index.css");
 
-.btn-buscar {
-    height: 50px;
+#tt {
+    color: var(--bs-indigo);
 }
