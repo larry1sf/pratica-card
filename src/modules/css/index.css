@@ -156,16 +156,16 @@ body {
       right: .1rem;
       transition: var(--time);
 
-
-
+      .st2{
+        stroke:var(--bs-indigo);
+      }
       &:hover {
         cursor: pointer;
         background-color: var(--bg);
         box-shadow: 0 0 5px var(--bs-indigo);
 
-
         .st2 {
-          stroke: var(--bs-indigo);
+          stroke: var(--bs-btn-active);
         }
       }
     }
@@ -238,8 +238,11 @@ body {
         }
 
         >#img img {
+          max-width: 25px;
+          max-height: 25px;
           z-index: 1;
-          border: 2px solid transparent;
+          border: 1px solid var(--bs-indigo);
+          transition: .1s;
         }
 
         &:hover {
@@ -269,7 +272,8 @@ body {
           }
 
           #img img {
-            border: 1px solid var(--bg);
+
+            border-color:var(--bs-btn-active);
             transition: .15s;
           }
         }
@@ -363,7 +367,7 @@ body {
         background-color: var(--bg);
         transition: .2s, scale .15s;
       }
-
+      
       +.option {
         #svg-option {
           border: 1px solid transparent;
@@ -378,7 +382,7 @@ body {
           }
 
           .st2 {
-            stroke: var(--bs-indigo);
+            stroke: var(--txt);
           }
         }
       }
@@ -396,10 +400,12 @@ body {
   }
 
   /* avatar */
-  >div>img {
+  >div>.avatar {
+    max-width: 100px;
+    max-height: 100px;
     object-fit: cover;
     object-position: 60% 20%;
-    border: 1px solid var(--bs-indigo);
+    border: 2px solid var(--bs-indigo);
   }
 }
 
@@ -515,51 +521,53 @@ body {
   background: var(--bg);
   
   >div>small {
-    background: var(--bg);
     border-radius: var(--br);
     transition: var(--time);
-     svg{
-      transition: var(--time);
-     }
-     span{
-      /* padding: .3rem 0; */
-      transition: var(--time);
-     }
+    scale: .9;
+
+      >svg{
+        filter: blur(.08em);
+        transition: .162s;
+      }
+
+      >span{
+        font-family: " font-1";
+        color: var(--txt);
+        transition: var(--time);
+        }
+   
      &:hover{
-       cursor: pointer;
-       filter: brightness(1) contrast(1.3);
-       box-shadow: 0 0 4px inset var(--txt),0 .16rem 6px var(--txt);
-      background-image: url(https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg);
-      background-repeat: no-repeat;
-      background-size: 300% 300%; 
-       transition: var(--time);
+        cursor:crosshair;
+        scale: 1;
+        filter: brightness(1) contrast(1.4) ;
+        box-shadow: 
+        0 0 7px inset var(--bs-indigo),
+        0 .20rem 20px var(--bs-indigo);
+        background-image: url(https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg);
+        background-repeat: no-repeat;
+        background-size: 300% 300%; 
+        transition: var(--time) ;
        
        &:nth-child(2){
+        scale: 1;
         background-image: url(https://www.dicoding.com/blog/wp-content/uploads/2022/11/aaassdsd.png);
-        background-size: 220% 220%  ; 
-        background-position:25% top;
-        transition: background-position 0s;
+        background-size: 197% 270% ; 
       }
        &:nth-child(3){
         background-image: url(https://www.amincharoliya.com/_next/image?url=%2Fimages%2Farticles%2Fjs-class.png&w=3840&q=75);
-        background-size: 190% 250%  ;
+        background-size: 190% 250% ;
       }
        >span{
          transition: var(--time);
          transform: scale(.1) ;
         }
       
-      svg{
-        scale:1.2;
+      >svg{
+        filter: blur(0em);
         transform: scale(.5) translate(-60%, -75%);
-        transition: .5s;
+        transition: var(--time);
       }
-    }
-
-    >span {
-      font-family: " font-1";
-    }
-    
+    }    
   }
 }
 
