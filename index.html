@@ -25,20 +25,21 @@
     <meta name="og:img:height" content="250">
     <meta name="og:img:width" content="250">   
     <meta name="og:img:alt" content="descripcion de la imagen">
-    <meta http-equiv="refresh" content="0">
 
     
     
     
     
-    <script type="module" crossorigin src="/pratica-card/index-26274caa.js"></script>
-    <link rel="stylesheet" href="/pratica-card/index-0d9fa77e.css">
+    <script type="module" crossorigin src="/pratica-card/main-dba1acd6.js"></script>
+    <link rel="modulepreload" crossorigin href="/pratica-card/bootstrap.bundle.min-d4033856.js">
+    <link rel="stylesheet" href="/pratica-card/bootstrap.bundle-45676771.css">
+    <link rel="stylesheet" href="/pratica-card/index-31e4cd7c.css">
   </head>
 
   <body>
     <div class="container ">
-      <div class="row justify-content-center  p-3 ">
-        <div class="col-12 col-md-9 col-lg-7 col-xl-5 py-1">
+      <div class="row justify-content-center g-0 p-3 ">
+        <div class="col-12 col-md-9 col-lg-7 col-xl-5">
           <div class="card h-100  position-relative">
             <!-- bg principal -->
             <div class="position-relative opacar" id="bg-fondo" role="banner">
@@ -131,7 +132,7 @@
 
                   </div>
                   <!-- button comentarios -->
-                  <a href="comentarios"
+                  <a href="./comentarios.html"
                     class="comentarios btn-group d-flex justify-content-around botder-top-1 align-items-center text-center"
                     style="text-decoration: none;">
                     <p class="mb-0" style="text-decoration: none;">comentarios</p>
@@ -168,9 +169,9 @@
               </div>
             </div>
             <!-- texto del centro de la card -->
-            <div class="card-body vstack justify-content-around opacar">
+            <div class="card-body vstack justify-content-around opacar p-2">
               <!-- texto principales -->
-              <div class="text-center row gap-3 gap-sm-5 justify-content-around align-items-center ">
+              <div class="text-center row gap-3 gap-sm-4 justify-content-around align-items-center ">
                 <!-- text1 -->
                 <h1 class="col-7 d-flex card-title justify-content-center" tabindex="2">
                   <a class="name" id="n-1" href="https://www.facebook.com/alarry.ceballos" target="_blank" style="text-decoration: none;">Larry Ceballos</a>
@@ -217,12 +218,12 @@
                         </g>
                       </svg>
                     </i>
-                    <span class="col-9">fallecido el 09/12/1987</span>
+                    <span class="col-9 ">bucaramanga, fallecido el 09/12/1987</span>
                   </a>
 
                 <!-- </h2> -->
                 <a class="location hoverear col-7 px-0 col-sm-5" href="https://www.google.com/maps/place/Cra.+19+%2339-26,+Bol%C3%ADvar,+Bucaramanga,+Santander/@7.1170044,-73.1249267,930m/data=!3m2!1e3!4b1!4m6!3m5!1s0x8e683fd9e89e4a09:0xd6723fd288cf619c!8m2!3d7.1170044!4d-73.1223518!16s%2Fg%2F11j3nbsgh2?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank" tabindex="5">
-                  <span> Cra19 #39-26</span>
+                  <span>Bucaramanga, Cra19 #39-26</span>
                 </a>
               </div>
               <!-- descripcion del personaje -->
@@ -321,7 +322,8 @@
                     </div>
                     <div class="col-5">
                       <input type="radio" class="btn-check" name="options-base" id="btnConfir2" autocomplete="off" checked> 
-                      <label class="btn col-12 mx-1 font-2" for="btnConfir2" aria-label="Confirmar" title="Confirmar">Confirmar</label>
+                      <label class="btn col-12 mx-1 font-2" for="btnConfir2" data-bs-dismiss="offcanvas" aria-label="Confirmar"
+                        title="Confirmar">Confirmar</label>
                     </div>
                   </div>
               </div>
