@@ -25,7 +25,7 @@
   
   
   /* colores */
-  --bg: #F8F2F2;
+  --bg: #fff3eb;
   --txt: #222831;
   --bs-indigo:#85CEFF;
   --bs-purple: #69A5CD;
@@ -543,18 +543,18 @@ body {
         box-shadow: 
         0 0 7px inset var(--bs-indigo),
         0 .20rem 20px var(--bs-indigo);
-        background-image: url(https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg);
+        background-image: url("https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg");
         background-repeat: no-repeat;
         background-size: 300% 300%; 
         transition: var(--time) ;
        
        &:nth-child(2){
         scale: 1;
-        background-image: url(https://www.dicoding.com/blog/wp-content/uploads/2022/11/aaassdsd.png);
+        background-image: url("https://www.dicoding.com/blog/wp-content/uploads/2022/11/aaassdsd.png");
         background-size: 197% 270% ; 
       }
        &:nth-child(3){
-        background-image: url(https://www.amincharoliya.com/_next/image?url=%2Fimages%2Farticles%2Fjs-class.png&w=3840&q=75);
+        background-image: url("https://www.amincharoliya.com/_next/image?url=%2Fimages%2Farticles%2Fjs-class.png&w=3840&q=75");
         background-size: 190% 250% ;
       }
        >span{
