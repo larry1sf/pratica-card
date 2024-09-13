@@ -15,19 +15,19 @@
   --fondo-bg-1: #ff3867;
   --fondo-bg-2: #ffc873;
   --fondo-bg-3: #d37ec6;
-  
-  
+
+
   /* focus */
   --bg-o: #ccc;
   --bg-s: #888;
   /*  animaciones*/
   --time: .3s;
-  
-  
+
+
   /* colores */
   --bg: #fff3eb;
   --txt: #222831;
-  --bs-indigo:#85CEFF;
+  --bs-indigo: #85CEFF;
   --bs-purple: #69A5CD;
   --bs-btn-active: #548EB6;
   /* --bs-indigo-option: #000; */
@@ -37,18 +37,19 @@
   --b: 1px solid var(--bg-s);
   --b-2: 1px solid var(--bs-purple);
 }
-.theme-dark{
+
+.theme-dark {
   --b-2: 1px solid var(--bs-indigo);
-  --bg:#222831;
-  --txt:#E6E7E9;
-  --bs-purple:#A3AAB8;
-  --bs-indigo:#808A9D;
+  --bg: #222831;
+  --txt: #E6E7E9;
+  --bs-purple: #A3AAB8;
+  --bs-indigo: #808A9D;
   --bs-btn-active: #484F5B;
 }
 
-.btn-close{
+.btn-close {
   /* --bs-btn-close-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23000'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e); */
-  --bs-btn-close-bg:url(../../../public/svg/close.svg);
+  --bs-btn-close-bg: url(../../../public/svg/close.svg);
   --bs-btn-close-color: #000;
   --bs-btn-close-opacity: 0.5;
   --bs-btn-close-hover-opacity: 0.75;
@@ -65,39 +66,44 @@
   border: 0;
   border-radius: .375rem;
   opacity: var(--bs-btn-close-opacity);
-}  
+}
 
-.font-1{
+.font-1 {
   font-family: " font-1";
 }
 
-.font-2{
+.font-2 {
   font-family: " font-2";
 }
 
-.btn{
+.btn {
   color: var(--bg);
-  &:hover{
+
+  &:hover {
     color: var(--bg) !important;
   }
 }
 
-.btn-check:checked+.btn{
+.btn-check:checked+.btn {
   color: var(--txt) !important;
   font-weight: 400;
 }
 
-.btn-check:checked+.btn,.btn.active, .btn.show, .btn:first-child:active, :not(.btn-check)+.btn:active{
-  border-color: var(--bs-indigo) ;
+.btn-check:checked+.btn,
+.btn.active,
+.btn.show,
+.btn:first-child:active,
+:not(.btn-check)+.btn:active {
+  border-color: var(--bs-indigo);
   background-color: var(--bs-indigo);
   color: var(--bg);
 }
 
-.borde{
+.borde {
   border: var(--b-2);
 }
 
-.opa-40{
+.opa-40 {
   opacity: .4;
   transition: var(--time);
 }
@@ -156,9 +162,10 @@ body {
       right: .1rem;
       transition: var(--time);
 
-      .st2{
-        stroke:var(--bs-indigo);
+      .st2 {
+        stroke: var(--bs-indigo);
       }
+
       &:hover {
         cursor: pointer;
         background-color: var(--bg);
@@ -195,7 +202,8 @@ body {
       }
 
       #checkSwitch {
-        background-image:  url("../../../public/svg/pint.svg");
+        background-image: url("../../../public/svg/pint.svg");
+
         &:checked {
           flex-shrink: 0;
           width: 2em;
@@ -241,7 +249,7 @@ body {
           max-width: 25px;
           max-height: 25px;
           z-index: 1;
-          border: 1px solid var(--bs-indigo);
+          border: .03rem solid var(--bs-indigo);
           transition: .1s;
         }
 
@@ -272,8 +280,8 @@ body {
           }
 
           #img img {
-
-            border-color:var(--bs-btn-active);
+            border: .03rem solid var(--bs-indigo);
+            border-color: var(--bs-btn-active);
             transition: .15s;
           }
         }
@@ -367,7 +375,7 @@ body {
         background-color: var(--bg);
         transition: .2s, scale .15s;
       }
-      
+
       +.option {
         #svg-option {
           border: 1px solid transparent;
@@ -405,7 +413,7 @@ body {
     max-height: 100px;
     object-fit: cover;
     object-position: 60% 20%;
-    border: 2px solid var(--bs-indigo);
+    border: .19rem solid var(--bs-indigo);
   }
 }
 
@@ -458,13 +466,15 @@ body {
   font-size: 1rem;
   color: var(--txt);
 }
-.desc.hoverear{
-  &:hover{
-    &::after{
+
+.desc.hoverear {
+  &:hover {
+    &::after {
       scale: 10 1;
     }
   }
 }
+
 .hoverear {
   position: relative;
 
@@ -491,18 +501,19 @@ body {
   }
 }
 
-@media (0px <= width <= 580px) {
-  .fecha.hoverear{
-    &:hover{
-      &::after{
+@media (0px <=width <=580px) {
+  .fecha.hoverear {
+    &:hover {
+      &::after {
         scale: 5.5 1;
       }
     }
   }
-  .hoverear{
-  &:hover{
-    &::after{
-       scale:7 1;
+
+  .hoverear {
+    &:hover {
+      &::after {
+        scale: 7 1;
       }
     }
   }
@@ -512,62 +523,68 @@ body {
   font-family: " font-1";
 }
 
-.card-body{
+.card-body {
   background: var(--bg);
 }
 
 .card-footer {
   border-top: 1px solid var(--bs-indigo) !important;
   background: var(--bg);
-  
+
   >div>small {
+    --time-card: .4s;
     border-radius: var(--br);
+    border: .13rem solid var(--bg-s);
+    box-shadow: 0 0rem 4px var(--txt);
+    background-size: 110% 110%;
+    background-position: center;
     transition: var(--time);
     scale: .9;
 
-      >svg{
-        filter: blur(.08em);
-        transition: .162s;
+    >svg {
+      filter: blur(.08em);
+      transition: .25s;
+    }
+
+    >span {
+      font-family: " font-1";
+      color: var(--txt);
+      transition: var(--time);
+    }
+
+    &:hover {
+      cursor: none;
+      scale: 1;
+      border: .13rem solid transparent;
+      filter: brightness(1) contrast(1.4);
+      box-shadow: 0 .15rem 12px var(--txt);
+      background-image: url("../../../public/svg/html-console-bg.svg");
+      background-repeat: no-repeat;
+
+      transition: var(--time-card);
+
+      &:nth-child(2) {
+        scale: 1;
+        background-image: url("../../../public/svg/css-console-bg.svg");
+
       }
 
-      >span{
-        font-family: " font-1";
-        color: var(--txt);
+      &:nth-child(3) {
+        background-image: url("../../../public/svg/js-console-bg.svg");
+
+      }
+
+      >span {
         transition: var(--time);
-        }
-   
-     &:hover{
-        cursor:crosshair;
-        scale: 1;
-        filter: brightness(1) contrast(1.4) ;
-        box-shadow: 
-        0 0 7px inset var(--bs-indigo),
-        0 .20rem 20px var(--bs-indigo);
-        background-image: url("https://s.zst.com.br/cms-assets/2021/03/funciona-html-1-.jpg");
-        background-repeat: no-repeat;
-        background-size: 300% 300%; 
-        transition: var(--time) ;
-       
-       &:nth-child(2){
-        scale: 1;
-        background-image: url("https://www.dicoding.com/blog/wp-content/uploads/2022/11/aaassdsd.png");
-        background-size: 197% 270% ; 
+        transform: scale(.01);
       }
-       &:nth-child(3){
-        background-image: url("https://www.amincharoliya.com/_next/image?url=%2Fimages%2Farticles%2Fjs-class.png&w=3840&q=75");
-        background-size: 190% 250% ;
-      }
-       >span{
-         transition: var(--time);
-         transform: scale(.1) ;
-        }
-      
-      >svg{
+
+      >svg {
         filter: blur(0em);
         transform: scale(.5) translate(-60%, -75%);
-        transition: var(--time);
+        transition: var(--time-card);
       }
-    }    
+    }
   }
 }
 
