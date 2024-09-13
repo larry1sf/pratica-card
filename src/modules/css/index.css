@@ -542,47 +542,48 @@ body {
   }
 
   >div>small {
+
     --time-card: .4s;
     border-radius: var(--br);
-    border: .13rem solid var(--bg-s);
     box-shadow: 0 0rem 4px var(--txt);
-    background-color: #85ceffa6;
-    background-size: 122%;
-    background-position: center;
-    transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 5px;
+    background-image: url("../../../public/svg/bg-card-footer.svg");
     scale: .9;
+    transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88),
+      background 0s;
 
     >svg {
-      filter: blur(.08em);
       transition: .25s;
     }
 
     >span {
       font-family: " font-1";
       color: var(--txt);
-      transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88)r;
+      transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88);
     }
 
     &:hover {
-      cursor: none;
-      scale: 1;
-      border: .13rem solid transparent;
       filter: brightness(1) contrast(1.4);
       box-shadow: 0 .15rem 12px var(--txt);
+      scale: 1;
+      background-position: 50%;
       background-image: url("../../../public/svg/html-console-bg.svg");
-      background-repeat: no-repeat;
 
-      transition: var(--time-card);
+      transition: var(--time-card), background 0s;
 
       &:nth-child(2) {
+        background-size: cover;
         scale: 1;
         background-image: url("../../../public/svg/css-console-bg.svg");
 
       }
 
       &:nth-child(3) {
+        background-size: cover;
+        scale: 1;
         background-image: url("../../../public/svg/js-console-bg.svg");
-
       }
 
       >span {
@@ -591,9 +592,21 @@ body {
       }
 
       >svg {
-        filter: blur(0em);
-        transform: scale(.5) translate(80%, -150%);
+        transform: scale(.5) translate(80%, -140%);
         transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3);
+      }
+    }
+  }
+
+  @media (0px<=width<=576px) {
+    .overflow-scroll-auto {
+      height: 85px;
+      padding: .25rem;
+      overflow: hidden scroll;
+      scroll-snap-type: y mandatory;
+
+      small {
+        scroll-snap-align: center;
       }
     }
   }
