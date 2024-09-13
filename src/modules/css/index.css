@@ -531,14 +531,25 @@ body {
   border-top: 1px solid var(--bs-indigo) !important;
   background: var(--bg);
 
+  .logros {
+    font-family: " font-1";
+    font-size: .9rem;
+    line-height: 25px;
+
+    ~svg {
+      transform: translateY(1px);
+    }
+  }
+
   >div>small {
     --time-card: .4s;
     border-radius: var(--br);
     border: .13rem solid var(--bg-s);
     box-shadow: 0 0rem 4px var(--txt);
-    background-size: 110% 110%;
+    background-color: #85ceffa6;
+    background-size: 122%;
     background-position: center;
-    transition: var(--time);
+    transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88);
     scale: .9;
 
     >svg {
@@ -549,7 +560,7 @@ body {
     >span {
       font-family: " font-1";
       color: var(--txt);
-      transition: var(--time);
+      transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88)r;
     }
 
     &:hover {
@@ -581,8 +592,8 @@ body {
 
       >svg {
         filter: blur(0em);
-        transform: scale(.5) translate(-60%, -75%);
-        transition: var(--time-card);
+        transform: scale(.5) translate(80%, -150%);
+        transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3);
       }
     }
   }

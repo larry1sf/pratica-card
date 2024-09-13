@@ -44,8 +44,8 @@ export default function miniReact () {
     color: { colorPrimario: '#404e67', colorSegundario: '#fff3eb' }
   }
   const personajeLarry = {
-    avatar: '../../public/imgs/me2.jpg',
-    srcFondo: '../../public/imgs/bg-codigo.jpg',
+    avatar: 'https://github.com/larry1sf/pratica-card/blob/main/public/imgs/me2.jpg?raw=true',
+    srcFondo: 'https://github.com/larry1sf/pratica-card/blob/main/public/imgs/bg-codigo.jpg?raw=true',
     name: 'Larry Moncada',
     ubicacion: ' Bucaramanga, cra19 #39-26',
     desc: 'Un joven desarrollador apasionado por las tegnologias nuevas de programacion y administracion de proyectos enfocado en el front-end y con conocimientos fundamentales del back-end',
