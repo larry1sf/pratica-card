@@ -71,7 +71,7 @@ export default function miniReact () {
     const name = document.getElementsByClassName('name')[0]
     const img = [name.parentElement.children][0].img.children[0]
 
-    const cambioImg = (Name) => { img.src = Name.avatar }
+    const cambioImg = (Img) => { img.src = Img.avatar }
     const cambioName = (Name) => { name.innerText = Name.name }
 
     const cambioPorEstado = (nameInRound) => { cambioImg(nameInRound); cambioName(nameInRound) }
@@ -101,6 +101,7 @@ export default function miniReact () {
     // fin-name-pefil
 
     // inicio-fechas
+
     // eslint-disable-next-line no-unused-vars
     const [_, fechaNacimiento, fechaMuerte, Ubicacion] = namePerfil.parentElement.parentElement.children
     const [FechaNacimiento, FechaMuerte] = [personaMostrar.fechas.fechaNacimiento, personaMostrar.fechas.fechaMuerte]
@@ -108,7 +109,8 @@ export default function miniReact () {
       if (value) {
         console.log('w')
       } else {
-        console.log(fechaMuerte.style.display = ' none')
+        fechaMuerte.style.display = ' none'
+        console.log('no tiene fecha de muerte, ¡sigues vivo!')
       }
     }
     Undefinided(FechaMuerte)
@@ -131,7 +133,7 @@ export default function miniReact () {
     // final-footer
   }
 
-  const root = (estado) => {
+  const root = () => {
     const personaMostrar = estado
       ? usuarios(personajeLarry)
       : usuarios(personajeXXXTentacion)
@@ -145,9 +147,14 @@ export default function miniReact () {
       estado
         ? estado = false
         : estado = true
-
-      root(estado)
+      root()
     })
-
-  root(estado)
+  root()
+}
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(function (position) {
+    console.log(`${position.coords.latitude},${position.coords.longitude}`)
+  })
+} else {
+  console.log('no tiene geolocalizador')
 }
