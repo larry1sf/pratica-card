@@ -1,4 +1,3 @@
-/* eslint-disable indent */
 export default function miniReact () {
   const usuarios = ({
     avatar = 'sin ruta de avatar',
@@ -43,6 +42,7 @@ export default function miniReact () {
     },
     color: { colorPrimario: '#404e67', colorSegundario: '#fff3eb' }
   }
+
   const personajeLarry = {
     avatar: 'https://github.com/larry1sf/pratica-card/blob/main/public/imgs/me2.jpg?raw=true',
     srcFondo: 'https://github.com/larry1sf/pratica-card/blob/main/public/imgs/bg-codigo.jpg?raw=true',
@@ -66,19 +66,6 @@ export default function miniReact () {
     }
   }
 
-  document.querySelector("[for='btnConfir2']")
-    .addEventListener('click', () => {
-      estado
-        ? estado = false
-        : estado = true
-
-      const personaMostrar = estado
-        ? usuarios(personajeLarry)
-        : usuarios(personajeXXXTentacion)
-
-      cambioInformacion(personaMostrar)
-      avatarSiguiente()
-    })
   const avatarSiguiente = () => {
     // inicio-miniAvatar&name
     const name = document.getElementsByClassName('name')[0]
@@ -117,13 +104,17 @@ export default function miniReact () {
     // eslint-disable-next-line no-unused-vars
     const [_, fechaNacimiento, fechaMuerte, Ubicacion] = namePerfil.parentElement.parentElement.children
     const [FechaNacimiento, FechaMuerte] = [personaMostrar.fechas.fechaNacimiento, personaMostrar.fechas.fechaMuerte]
-      // const Undefinided = (value) => {
-      // if (value === undefined) {
-      // const after = window.getComputedStyle(fechaMuerte, '::after')
-      // } return value
-      // }
-      ;[fechaNacimiento.href, fechaMuerte.href] = [personaMostrar.ruta.urlFN, personaMostrar.ruta.urlFM]
-      ;[fechaNacimiento.innerText, fechaMuerte.innerText] = [FechaNacimiento, FechaMuerte]
+    const Undefinided = (value) => {
+      if (value) {
+        console.log('w')
+      } else {
+        console.log(fechaMuerte.style.display = ' none')
+      }
+    }
+    Undefinided(FechaMuerte)
+
+    ;[fechaNacimiento.href, fechaMuerte.href] = [personaMostrar.ruta.urlFN, personaMostrar.ruta.urlFM]
+    ;[fechaNacimiento.innerText, fechaMuerte.innerText] = [FechaNacimiento, FechaMuerte]
     // fin-fechas
     // inicio-ubicacion
     Ubicacion.ariaLabel = Ubicacion.title = Ubicacion.innerText = personaMostrar.ubicacion
@@ -140,5 +131,23 @@ export default function miniReact () {
     // final-footer
   }
 
-  avatarSiguiente()
+  const root = (estado) => {
+    const personaMostrar = estado
+      ? usuarios(personajeLarry)
+      : usuarios(personajeXXXTentacion)
+
+    cambioInformacion(personaMostrar)
+    avatarSiguiente()
+  }
+
+  document.querySelector("[for='btnConfir2']")
+    .addEventListener('click', () => {
+      estado
+        ? estado = false
+        : estado = true
+
+      root(estado)
+    })
+
+  root(estado)
 }
