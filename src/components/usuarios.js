@@ -5,7 +5,7 @@ export default function miniReact () {
     name = 'Default',
     ubicacion = 'nombe pre def',
     desc = 'Este Usuario de tiene descripcion',
-    ruta = { urlName: 'url default', urlFN: '', urlFM: '', urlUbi: 'sin ubicaion', imgsFooter: ['', '', ''] },
+    ruta = { urlName: 'url default', urlFN: '', urlFM: '', urlUbi: 'sin ubicaion', avatarFooter: [], imgsFooter: [] },
     fechas = {
       fechaNacimiento: 'Fecha de nacimiento vacia',
       fechaMuerte: 'Fecha no fallecimineto vacia'
@@ -28,13 +28,11 @@ export default function miniReact () {
       urlFN: 'https://en.wikipedia.org/wiki/XXXTentacion',
       urlFM: 'https://www.nytimes.com/2018/06/18/arts/music/xxxtentacion-dead.html',
       urlUbi: 'https://www.bing.com/maps?q=deerfield+beach%2C+florida&FORM=HDRSC6&cp=26.301203%7E-80.093508&lvl=13.6',
-      imgsFooter: {
-        urls: [
-          'https://images.genius.com/a899338be5f606ea4efcc2d371a87a6c.939x939x1.png',
-          'https://www.thefamouspeople.com/profiles/images/xxxtentacion-1.jpg',
-          'https://preview.redd.it/81ql9so6x6w11.jpg?auto=webp&s=e81f9ce8ddbfb3589cc476995a156ae506992853'],
-        names: ['fase-1', 'fase-2', 'fase-3']
-      }
+      imgsFooter: [
+        'https://images.genius.com/a899338be5f606ea4efcc2d371a87a6c.939x939x1.png',
+        'https://www.thefamouspeople.com/profiles/images/xxxtentacion-1.jpg',
+        'https://preview.redd.it/81ql9so6x6w11.jpg?auto=webp&s=e81f9ce8ddbfb3589cc476995a156ae506992853']
+
     },
     fechas: {
       fechaNacimiento: 'Nacido el 23/enero/1998',
