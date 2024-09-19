@@ -7,12 +7,13 @@
 @font-face {
   font-family: " font-2";
   /* font-weight: 600; */
-  src: url("../../../public/fonts/Exo-Light.ttf");
+  src: url("../../../public/fonts/Dosis-Light.ttf");
 }
 
 :root {
   /* bg-color */
   --fondo-bg-1: #ff3867;
+  --fondo-bg-1-a: #b8435e;
   --fondo-bg-2: #ffc873;
   --fondo-bg-3: #d37ec6;
 
@@ -27,9 +28,9 @@
   /* colores */
   --bg: #fff3eb;
   --txt: #222831;
-  --bs-indigo: #85CEFF;
-  --bs-purple: #69A5CD;
-  --bs-btn-active: #548EB6;
+  --bs-indigo: var(--fondo-bg-1);
+  --bs-purple: var(--fondo-bg-1-a);
+  --bs-btn-active: var(--fondo-bg-1-a);
   /* --bs-indigo-option: #000; */
   /* --btn-dark: #fff; */
   /*bordes  */
@@ -143,8 +144,9 @@ body {
 
 /* fondo de la card */
 #bg-fondo {
-  background: url("../../../public/imgs/bg-codigo.jpg") no-repeat;
-  background-size: 100% 100%;
+  /* background: url("../../../public/imgs/bg-codigo.jpg") no-repeat;
+  background-size: 100% 100%; */
+  position: relative;
   background-position: center;
   height: 30vh;
   border-top-left-radius: var(--br);
@@ -163,7 +165,7 @@ body {
       transition: var(--time);
 
       .st2 {
-        stroke: var(--bs-indigo);
+        stroke: var(--bg);
       }
 
       &:hover {
@@ -204,6 +206,10 @@ body {
       #checkSwitch {
         background-image: url("../../../public/svg/pint.svg");
 
+        &:focus {
+          box-shadow: 0 0 5px #000 !important;
+        }
+
         &:checked {
           flex-shrink: 0;
           width: 2em;
@@ -219,9 +225,9 @@ body {
           background-position: right center;
           background-size: contain;
           border: 1px solid var(--bs-purple);
-          -webkit-print-color-adjust: exact;
+          /* -webkit-print-color-adjust: exact; */
           /* color-adjust: exact; */
-          print-color-adjust: exact;
+          /* print-color-adjust: exact; */
         }
       }
 
@@ -444,10 +450,10 @@ body {
 
 .location {
   font-family: " font-2";
-  font-size: 1rem;
+  font-size: 1.3rem;
   color: var(--txt);
   text-decoration: none;
-  margin-bottom: .5rem !important;
+  /* margin-bottom: .5rem !important; */
 
 
   >span {
@@ -463,7 +469,7 @@ body {
 .desc {
   margin: 0 1.5rem .5rem 1.5rem;
   font-family: " font-2";
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: var(--txt);
 }
 
@@ -535,6 +541,7 @@ body {
     font-family: " font-1";
     font-size: .9rem;
     line-height: 25px;
+    color: var(--txt);
 
     ~svg {
       transform: translateY(1px);
@@ -542,20 +549,22 @@ body {
   }
 
   >div>small {
-
     --time-card: .4s;
     border-radius: var(--br);
     box-shadow: 0 0rem 4px var(--txt);
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 5px;
-    background-image: url("../../../public/svg/bg-card-footer.svg");
+    background-image: linear-gradient(to bottom left, var(--fondo-bg-1) 0%, var(--fondo-bg-2) 50%, var(--fondo-bg-3)90%);
+    background-repeat: no-repeat;
     scale: .9;
     transition: var(--time) cubic-bezier(0.26, 0.54, 0.13, 0.88),
       background 0s;
 
-    >svg {
-      transition: .25s;
+    >div {
+      >svg {
+        transition: .25s;
+      }
     }
 
     >span {
@@ -570,14 +579,12 @@ body {
       scale: 1;
       background-position: 50%;
       background-image: url("../../../public/svg/html-console-bg.svg");
-
       transition: var(--time-card), background 0s;
 
       &:nth-child(2) {
         background-size: cover;
         scale: 1;
         background-image: url("../../../public/svg/css-console-bg.svg");
-
       }
 
       &:nth-child(3) {
@@ -591,12 +598,18 @@ body {
         transform: scale(.01);
       }
 
-      >svg {
-        transform: scale(.5) translate(80%, -140%);
-        transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3);
+      >div {
+        >svg {
+          transform: scale(.5) translate(80%, -140%);
+          transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3);
+        }
       }
+
     }
   }
+
+
+
 
   @media (0px<=width<=576px) {
     .overflow-scroll-auto {
@@ -609,6 +622,49 @@ body {
         scroll-snap-align: center;
       }
     }
+  }
+}
+
+#conteAvatar {
+  .conte-load {
+    position: absolute;
+  }
+}
+
+.conte-load {
+  position: relative;
+  width: 100%;
+  height: 40%;
+  display: flex;
+  justify-content: space-around;
+
+  .item-load {
+    height: 10px;
+    width: 10px;
+    background-color: var(--bs-indigo);
+    border-radius: 5px;
+    scale: 2.5;
+    transform: translateY(2.5px);
+    animation: load .65s ease infinite alternate both;
+
+    &:nth-child(2) {
+      animation-delay: .25s;
+    }
+
+    &:nth-child(3) {
+      animation-delay: .5s;
+    }
+  }
+
+}
+
+@keyframes load {
+  0% {
+    opacity: .1;
+  }
+
+  77% {
+    opacity: .6;
   }
 }
 
