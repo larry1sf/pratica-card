@@ -109,6 +109,10 @@
   transition: var(--time);
 }
 
+.gap-3 {
+  gap: .5rem !important;
+}
+
 .btn-dark {
   background-color: var(--bs-indigo) !important;
   border: var(--b-2);
@@ -144,8 +148,6 @@ body {
 
 /* fondo de la card */
 #bg-fondo {
-  /* background: url("../../../public/imgs/bg-codigo.jpg") no-repeat;
-  background-size: 100% 100%; */
   position: relative;
   background-position: center;
   height: 30vh;
@@ -418,7 +420,7 @@ body {
     max-width: 100px;
     max-height: 100px;
     object-fit: cover;
-    object-position: 60% 20%;
+    object-position: 70% 20%;
     border: .19rem solid var(--bs-indigo);
   }
 }
@@ -469,7 +471,7 @@ body {
 .desc {
   margin: 0 1.5rem .5rem 1.5rem;
   font-family: " font-2";
-  font-size: 1.2rem;
+  font-size: 1.3rem;
   color: var(--txt);
 }
 
@@ -562,7 +564,9 @@ body {
       background 0s;
 
     >div {
-      >svg {
+
+      >svg,
+      >img {
         transition: .25s;
       }
     }
@@ -599,12 +603,35 @@ body {
       }
 
       >div {
+
         >svg {
-          transform: scale(.5) translate(80%, -140%);
-          transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3);
+          transform: scale(.5) translate(90%, -100%);
+          transition: var(--time-card) cubic-bezier(0.36, 0.45, 0.58, 1.3)
         }
       }
+    }
 
+  }
+
+
+  >div>.footer-x:hover {
+    background-image: url("../../../public/imgs/x/footer-1.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    >div>svg {
+      transform: scale(.5) translate(140%, -100%);
+    }
+
+    &:nth-child(2) {
+      background-image: url("../../../public/imgs/x/footer-2.webp");
+      background-position: 0% 35%;
+    }
+
+    &:nth-child(3) {
+      background-image: url("../../../public/imgs/x/footer-3.webp");
+      background-position: 0% 30%;
     }
   }
 
@@ -612,13 +639,13 @@ body {
 
 
   @media (0px<=width<=576px) {
-    .overflow-scroll-auto {
+    >.overflow-scroll-auto {
       height: 85px;
       padding: .25rem;
       overflow: hidden scroll;
       scroll-snap-type: y mandatory;
 
-      small {
+      >small {
         scroll-snap-align: center;
       }
     }
@@ -633,7 +660,7 @@ body {
 
 .conte-load {
   position: relative;
-  width: 100%;
+  /* width: 100%; */
   height: 40%;
   display: flex;
   justify-content: space-around;
@@ -645,14 +672,14 @@ body {
     border-radius: 5px;
     scale: 2.5;
     transform: translateY(2.5px);
-    animation: load .65s ease infinite alternate both;
+    animation: load .6s ease infinite alternate both;
 
     &:nth-child(2) {
-      animation-delay: .25s;
+      animation-delay: .3s;
     }
 
     &:nth-child(3) {
-      animation-delay: .5s;
+      animation-delay: .6s;
     }
   }
 
@@ -660,11 +687,11 @@ body {
 
 @keyframes load {
   0% {
-    opacity: .1;
+    opacity: .8;
   }
 
-  77% {
-    opacity: .6;
+  100% {
+    opacity: .1;
   }
 }
 
